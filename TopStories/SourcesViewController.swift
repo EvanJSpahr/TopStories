@@ -8,12 +8,15 @@
 import UIKit
 
 class SourcesViewController: UITableViewController {
+    
+    var sources = [[String: String]]()
+    let apiKey = "d45229539c5d4c6ea40599abe7ec48c8"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        self.title = "News Sources"
+        let query = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=\(apiKey)"
     }
-
-
 }
 
