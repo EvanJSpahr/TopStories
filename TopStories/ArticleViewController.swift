@@ -7,17 +7,16 @@
 
 import UIKit
 
-let apiKey = "d45229539c5d4c6ea40599abe7ec48c8"
-
-class SourcesViewController: UITableViewController {
+class ArticlesViewController: UITableViewController {
     
-    var sources = [[String: String]]()
+    var articles = [[String: String]]()
+    var source = [String: String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "News Sources"
-        let query = "https://newsapi.org/v1/sources?language=en&country=us&apiKey=\(apiKey)"
+        self.title = "Top Stories"
+        let query = "https://newsapi.org/v1/articles?source=\(source["id"]!)&apiKey=\(apiKey)"
         
         let url = URL(string: query)!
         DispatchQueue.global().async {
@@ -34,15 +33,12 @@ class SourcesViewController: UITableViewController {
     }
     
     func parse(json: JSON) {
-        for result in json["sources"].arrayValue {
-            print(result)
-            
-            let id = result["id"].stringValue
-            let name = result["name"].stringValue
+        for result in json["articles"].arrayValue {
+            let title = result["title"].stringValue
             let description = result["description"].stringValue
-            
-            let source = ["id": id, "name": name, "description": description]
-            sources.append(source)
+            let url = result["url"].stringValue
+            let article = ["title": title, "description": description, "url": url]
+            articles.append(article)
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -59,14 +55,14 @@ class SourcesViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sources.count
+        return articles.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsSourceCell", for: indexPath)
-        let source = sources[indexPath.row]
-        cell.textLabel?.text = source["name"]
-        cell.detailTextLabel?.text = source["description"]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoryCell", for: indexPath)
+        let article = articles[indexPath.row]
+        cell.textLabel?.text = article["title"]
+        cell.detailTextLabel?.text = article["description"]
         return cell
     }
 }

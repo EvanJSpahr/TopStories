@@ -17,6 +17,7 @@
 		587BCA7728E6194F0085DDBB /* TopStoriesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587BCA7628E6194F0085DDBB /* TopStoriesUITests.swift */; };
 		587BCA7928E6194F0085DDBB /* TopStoriesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587BCA7828E6194F0085DDBB /* TopStoriesUITestsLaunchTests.swift */; };
 		58FDC16128EB5CA000D95FCE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDC16028EB5CA000D95FCE /* SwiftyJSON.swift */; };
+		58FDC19F28EB69A100D95FCE /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FDC19E28EB69A100D95FCE /* ArticleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		587BCA7628E6194F0085DDBB /* TopStoriesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesUITests.swift; sourceTree = "<group>"; };
 		587BCA7828E6194F0085DDBB /* TopStoriesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		58FDC16028EB5CA000D95FCE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		58FDC19E28EB69A100D95FCE /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				587BCA5528E6194D0085DDBB /* AppDelegate.swift */,
 				587BCA5728E6194D0085DDBB /* SceneDelegate.swift */,
 				587BCA5928E6194D0085DDBB /* SourcesViewController.swift */,
+				58FDC19E28EB69A100D95FCE /* ArticleViewController.swift */,
 				587BCA5B28E6194D0085DDBB /* Main.storyboard */,
 				587BCA5E28E6194F0085DDBB /* Assets.xcassets */,
 				587BCA6028E6194F0085DDBB /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			files = (
 				587BCA5A28E6194D0085DDBB /* SourcesViewController.swift in Sources */,
 				587BCA5628E6194D0085DDBB /* AppDelegate.swift in Sources */,
+				58FDC19F28EB69A100D95FCE /* ArticleViewController.swift in Sources */,
 				587BCA5828E6194D0085DDBB /* SceneDelegate.swift in Sources */,
 				58FDC16128EB5CA000D95FCE /* SwiftyJSON.swift in Sources */,
 			);
