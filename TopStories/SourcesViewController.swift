@@ -69,5 +69,12 @@ class SourcesViewController: UITableViewController {
         cell.detailTextLabel?.text = source["description"]
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let articlesVC = segue.destination as? ArticlesViewController {
+            let index = tableView.indexPathForSelectedRow?.row
+            articlesVC.source = sources[index!]
+        }
+    }
 }
 
